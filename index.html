@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Grand</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      @media screen and (max-width: 600px) {
+        .navbar {
+          background-color: blanchedalmond;
+          display: flex;
+          flex-direction: column;
+          justify-content: start;
+          gap: 1rem;
+          padding: 1.5rem;
+        }
+        .logo {
+          color: crimson;
+        }
+        .Nav-items {
+          display: flex;
+          flex-direction: column;
+          list-style: none;
+          gap: 1rem;
+        }
+        .nav-list {
+          text-decoration: none;
+          color: black;
+        }
+        a:hover {
+          color: crimson;
+        }
+        .main {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+        }
+
+        .image {
+          padding: 10px;
+        }
+        .content {
+          text-align: justify;
+          padding: 0 10px;
+        }
+        .btn {
+          background-color: crimson;
+          padding: 2px;
+        }
+        .btn a {
+          text-decoration: none;
+          color: white;
+          padding: 2px;
+        }
+        .boxes {
+          padding: 15px;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          gap: 1rem;
+          text-align: justify;
+        }
+        .box1 {
+          border: 1px solid;
+          width: 300px;
+          padding: 1rem;
+        }
+        .box2 {
+          margin-top: 1rem;
+          border: 1px solid;
+          border: 1px solid;
+          width: 300px;
+          padding: 1rem;
+        }
+        .box3 {
+          border: 1px solid;
+          border: 1px solid;
+          width: 310px;
+          padding: 1rem;
+        }
+        .content1 {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          gap: 1rem;
+        }
+        .content2 {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          gap: 1rem;
+        }
+        .content3 {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          gap: 1rem;
+        }
+        .pic1 {
+          height: 30%;
+          width: 40%;
+          padding-top: 1rem;
+        }
+        .pic2 {
+          height: 25%;
+          width: 33%;
+          padding-top: 1rem;
+        }
+        .pic3 {
+          height: 30%;
+          width: 40%;
+          padding-top: 1rem;
+        }
+        #row1 {
+          padding: 0.5rem;
+        }
+        #row2 {
+          padding: 0.5rem;
+        }
+        #row3 {
+          padding: 0.5rem;
+        }
+        #heading {
+          color: blanchedalmond;
+        }
+        .bottom {
+          border: 1px solid;
+          color: white;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          gap: 3px;
+          padding: 0 5px;
+        }
+        .footer {
+          height: 500px;
+          width: 300px;
+          padding: 30px;
+          background-color: black;
+          align-items: center;
+        }
+        .company {
+          display: flex;
+          height: 500px;
+          width: 300px;
+        }
+      }
+
+      @media screen and (min-width: 601px) and (max-width: 1024px) {
+        .navbar {
+          border: 2px solid black;
+          background-color: blanchedalmond;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding: 1rem;
+        }
+        .logo {
+          color: crimson;
+          font-size: 2rem;
+        }
+        .Nav-items {
+          display: flex;
+          flex-direction: row;
+          flex-wrap: wrap;
+          gap: 3.5rem;
+          list-style: none;
+        }
+        .nav-list {
+          text-decoration: none;
+          color: black;
+        }
+        a:hover {
+          color: crimson;
+        }
+        .main {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+        }
+        .image {
+          padding-left: 1rem;
+        }
+        .content {
+          padding: 20px;
+          text-align: justify;
+          font-size: 16px;
+        }
+        .btn {
+          height: 30px;
+          width: 28%;
+          background-color: crimson;
+        }
+        .btn a {
+          text-decoration: none;
+          color: white;
+        }
+        .boxes {
+          padding: 10px;
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          gap: 2rem;
+        }
+        .box1 {
+          border: 1px solid;
+          width: 300px;
+          padding: 1rem;
+        }
+        .box2 {
+          margin-top: 2rem;
+          border: 1px solid;
+          border: 1px solid;
+          width: 300px;
+          padding: 1rem;
+        }
+        .box3 {
+          border: 1px solid;
+          border: 1px solid;
+          width: 600px;
+          padding: 1rem;
+          text-align: justify;
+        }
+        .content1 {
+          display: flex;
+          flex-direction: row;
+          gap: 3rem;
+        }
+        .content2 {
+          display: flex;
+          flex-direction: row;
+          gap: 3rem;
+        }
+        .content3 {
+          display: flex;
+          flex-direction: row;
+          gap: 3rem;
+        }
+        .pic1 {
+          height: 30%;
+          width: 40%;
+          padding-top: 1rem;
+        }
+        .pic2 {
+          height: 25%;
+          width: 33%;
+          padding-top: 1rem;
+        }
+        .pic3 {
+          height: 30%;
+          width: 40%;
+          padding-top: 1rem;
+        }
+        #row1 {
+          padding: 1rem;
+        }
+        #row2 {
+          padding: 1rem;
+        }
+        #row3 {
+          padding: 1rem;
+        }
+        #heading {
+          color: blanchedalmond;
+        }
+        .bottom {
+          border: 2px solid;
+          color: white;
+          display: flex;
+          flex-direction: row;
+          padding: 0 20px;
+          align-items: center;
+          margin-right:30px;
+        }
+        .footer {
+          height: 600px;
+          width: 700px;
+          padding: 30px;
+          background-color: black;
+          align-items: center;
+        }
+        .company {
+          display: flex;
+          height: 600px;
+          width: 60vw;
+        }
+      }
+
+      @media screen and (min-width: 1025px) {
+        .navbar {
+          border: 2px solid black;
+          background-color: blanchedalmond;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding: 1rem;
+        }
+        .logo {
+          color: crimson;
+          font-size: 2rem;
+        }
+        .Nav-items {
+          display: flex;
+          flex-direction: row;
+          flex-wrap: wrap;
+          gap: 3.5rem;
+          list-style: none;
+        }
+        .nav-list {
+          text-decoration: none;
+          color: black;
+        }
+        a:hover {
+          color: crimson;
+        }
+        .main {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+        }
+        .image {
+          padding-left: 1rem;
+        }
+        .content {
+          padding-right: 60px;
+          padding-top: 30px;
+          text-align: justify;
+          font-size: 15px;
+        }
+        .btn {
+          height: 35px;
+          width: 15%;
+          background-color: crimson;
+        }
+        .btn a {
+          text-decoration: none;
+          color: white;
+        }
+        .boxes {
+          padding: 30px;
+          display: flex;
+          flex-direction: row;
+          justify-content: space-evenly;
+          align-items: center;
+          gap: 2rem;
+        }
+        .box1 {
+          border: 1px solid;
+          width: 400px;
+          padding: 1rem;
+        }
+        .box2 {
+          margin-top: 2rem;
+          border: 1px solid;
+          border: 1px solid;
+          width: 400px;
+          padding: 1rem;
+        }
+        .box3 {
+          border: 1px solid;
+          border: 1px solid;
+          width: 700px;
+          padding: 1rem;
+          text-align: justify;
+        }
+        .content1 {
+          display: flex;
+          flex-direction: row;
+          gap: 3rem;
+        }
+        .content2 {
+          display: flex;
+          flex-direction: row;
+          gap: 3rem;
+        }
+        .content3 {
+          display: flex;
+          flex-direction: row;
+          gap: 3rem;
+        }
+        .pic1 {
+          height: 30%;
+          width: 40%;
+          padding-top: 1rem;
+        }
+        .pic2 {
+          height: 25%;
+          width: 33%;
+          padding-top: 1rem;
+        }
+        .pic3 {
+          height: 30%;
+          width: 40%;
+          padding-top: 1rem;
+        }
+        #row1 {
+          padding: 1rem;
+        }
+        #row2 {
+          padding: 1rem;
+        }
+        #row3 {
+          padding: 1rem;
+        }
+        #heading {
+          color: blanchedalmond;
+        }
+        .bottom {
+          border: 1px solid;
+          color: white;
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+          padding: 20px;
+        }
+        .footer {
+          height: 500px;
+          width: 500px;
+          padding: 30px;
+          background-color: black;
+          align-items: center;
+        }
+        .company {
+          display: flex;
+          height: 500px;
+          width: 51vw;
+        }
+      }
+      
+    </style>
+  </head>
+  <body>
+    <div class="navbar">
+      <div>
+        <h3 class="logo"><b>Grand</b></h3>
+      </div>
+      <ul class="Nav-items">
+        <li><a class="nav-list" href="">HOME</a></li>
+        <li><a class="nav-list" href="">ABOUT</a></li>
+        <li><a class="nav-list" href="">PORTFOLIO</a></li>
+        <li><a class="nav-list" href="">CONTACT</a></li>
+      </ul>
+    </div>
+    <div class="bg-image">
+      <div class="main">
+        <div class="image">
+          <img
+            src="https://templatemo.com/templates/templatemo_442_grand/images/templatemo_homeicon.png"
+            height="200px"
+            width="250px"
+          />
+        </div>
+        <div class="content">
+          <h2 id="heading">Responsive Mobile Layout</h2>
+          <h6>NEW WEB DESIGN</h6>
+          <br />
+          <p>
+            Grand Design is a free responsive template from templatemo. You can
+            use this layout for any website. Please help us by spreading a word
+            about us. Thank you. Credits go to Unsplash for images, Art
+            Professions Icon Set and Ballicons 2 Icon Set from Smashing
+            Magazine. Lorem quis bibendum auctor, nisi elit consequat ipsum, nec
+            sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate
+            cursus a sit amet mauris. Morbi accumsan ipsum velit.
+          </p>
+          <br />
+          <p>
+            Sed non mauris vitae erat consequat auctor eu in elit. Class aptent
+            taciti sociosqu ad litora torquent per conubia nostra, per inceptos
+            himenaeos. Mauris in erat justo. Nullam ac urna eu felis dapibus
+            condimentum sit amet a augue. Sed non neque elit. Sed ut imperdiet
+            nisi. Proin condimentum fermentum nunc. Etiam pharetra, erat sed
+            fermentum feugiat, velit mauris egestas quam.
+          </p>
+          <br />
+          <center>
+            <button class="btn" style="border-style: none">
+              <a href="#">Learn More</a>
+            </button>
+          </center>
+        </div>
+      </div>
+    </div>
+    <div class="boxes">
+      <div>
+        <div class="box1">
+          <h2>Great Design</h2>
+          <p>
+            Duis sed odio sit amet nibh vulputate cursus a sit amet mauris.
+            Morbi accumsan ipsum velitornare odio. Sed non .
+          </p>
+          <p>
+            Mauris vitae erat consequat auctor eu in elit. Class aptent taciti
+            sociosqu ad litora torquent per conubia nostra
+          </p>
+        </div>
+        <div class="box2">
+          <h2>New Section</h2>
+          <p>
+            Duis sed odio sit amet nibh vulputate cursus a sit amet mauris.
+            Morbi accumsan ipsum velitornare odio. Sed non .
+          </p>
+          <p>
+            Mauris vitae erat consequat auctor eu in elit. Class aptent taciti
+            sociosqu ad litora torquent per conubia nostra
+          </p>
+        </div>
+      </div>
+      <div class="box3">
+        <div class="content1">
+          <img
+            class="pic1"
+            src="https://templatemo.com/templates/templatemo_442_grand/images/templatemo_homeicon1.png"
+          />
+          <div id="row1">
+            <h3>SEDN ONMA URIVITAE</h3>
+            <p>
+              Fusce a diam. Morbi non nisl a urna consectetuer tempor. Etiam
+              mollis, lorem vel luctus malesuada, libero mauris viverra massa,
+              vulputate elementum nunc urna non felis. Phasellus sed metus.
+            </p>
+            <br />
+            <p>
+              Nullam convallis tellus a lacus. Mauris turpis sem, lacinia eu,
+              adipiscing in, tempor sit amet, lorem.
+            </p>
+          </div>
+        </div>
+        <hr />
+        <div class="content2">
+          <img
+            class="pic2"
+            src="https://templatemo.com/templates/templatemo_442_grand/images/templatemo_homeicon2.png"
+          />
+          <div id="row2">
+            <h3>CLASS APTENT SOCIOSQU</h3>
+            <p>
+              Aliquam rutrum suscipit quam. Suspendisse vel metus. Pellentesque
+              enim nibh, volutpat eu, lobortis eu, tristique quis, est. Aliquam
+              lacinia purus at sem.
+            </p>
+            <br />
+            <p>
+              Donec leo sem, commodo in, bibendum iaculis, euismod vitae, risus.
+              Suspendisse a erat id urna dapibus varius.
+            </p>
+          </div>
+        </div>
+        <hr />
+        <div class="content3">
+          <img
+            class="pic3"
+            src="https://templatemo.com/templates/templatemo_442_grand/images/templatemo_homeicon3.png"
+          />
+          <div id="row3">
+            <h3>MAURIS INERAT JUSTO NULLAM</h3>
+            <p>
+              Aenean molestie mollis sapien. Morbi scelerisque pellentesque
+              nulla. Duis blandit, nunc sed porttitor congue, eros nisl
+              consectetuer purus, quis elementum leo risus pharetra quam. Nulla
+              posuere.
+            </p>
+            <br />
+            <p>
+              Proin facilisis, nisi eget rutrum rutrum, sapien arcu molestie
+              sem, eget gravida sapien nisi in ante.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="bottom">
+      <div class="footer">
+        <h2 id="heading"><b>CRAS INTERDUM ACCUSAN DIAM</b></h2>
+        <br />
+        <p>
+          Etiam mollis, lorem vel luctus malesuada, libero mauris viverra massa,
+          vulputate elementum nunc urna non felis.
+        </p>
+        <br />
+        <p>
+          Suspendisse a erat id urna dapibus varius. Proin facilisis, nisi eget
+          rutrum rutrum, sapien arcu molestie sem, eget gravida sapien nisi in
+          ante.
+        </p>
+        <br />
+        <p>
+          Aenean sapien. Suspendisse lobortis, nulla rhoncus scelerisque cursus,
+          neque nunc bibendum nibh, non tempus eros neque at pede.
+        </p>
+      </div>
+      <img
+        class="company"
+        src="https://templatemo.com/templates/templatemo_442_grand/images/templatemo_company.jpg"
+      />
+    </div>
+    <br>
+    <div>
+      <p style="text-align: center">
+        Copyright © 2084 Company Name | Designed by free responsive templates
+      </p>
+      <br />
+    </div>
+  </body>
+</html>
